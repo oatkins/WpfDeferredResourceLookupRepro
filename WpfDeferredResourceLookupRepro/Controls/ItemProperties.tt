@@ -1,0 +1,33 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".g.cs" #>
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+
+namespace WpfDeferredResourceLookupRepro.Controls
+{
+    public sealed partial class ItemProperties
+    {
+<#
+for (int ix = 1; ix <= 20; ix++)
+{
+#>
+        public static readonly DependencyProperty ItemBrush<#= ix #>Property =
+            DependencyProperty.RegisterAttached("ItemBrush<#= ix #>",
+                typeof(Brush),
+                typeof(ItemProperties),
+                new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender));
+
+        public static Brush GetItemBrush<#= ix #>(ListViewItem obj) => (Brush)obj.GetValue(ItemBrush<#= ix #>Property);
+
+        public static void SetItemBrush<#= ix #>(ListViewItem obj, object value) => obj.SetValue(ItemBrush<#= ix #>Property, value);
+
+<#
+}
+#>
+    }
+}

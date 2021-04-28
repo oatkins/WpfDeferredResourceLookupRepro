@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WpfDeferredResourceLookupRepo.ViewModels
+namespace WpfDeferredResourceLookupRepro.ViewModels
 {
     public abstract class ViewModel : INotifyPropertyChanged
     {

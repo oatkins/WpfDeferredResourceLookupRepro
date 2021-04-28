@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WpfDeferredResourceLookupRepo.ViewModels
+﻿namespace WpfDeferredResourceLookupRepro.ViewModels
 {
     public sealed class ThingViewModel : ViewModel
     {

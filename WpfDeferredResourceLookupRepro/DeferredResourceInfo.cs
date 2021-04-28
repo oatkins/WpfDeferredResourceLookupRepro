@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 
-namespace WpfDeferredResourceLookupRepo
+namespace WpfDeferredResourceLookupRepro
 {
     internal class DeferredResourceInfo
     {
@@ -15,10 +15,13 @@ namespace WpfDeferredResourceLookupRepo
 
         private static readonly PropertyInfo KeyPropertyInfo = DeferredResourceReferenceType.GetProperty("Key", BindingFlags.Instance | BindingFlags.NonPublic);
 
-        private DeferredResourceInfo(string key)
+        private DeferredResourceInfo(string dictionaryIdentity, string key)
         {
-            this.Key = key;
+            DictionaryIdentity = dictionaryIdentity;
+            Key = key;
         }
+
+        public string DictionaryIdentity { get; }
 
         public string Key { get; }
 
@@ -35,9 +38,15 @@ namespace WpfDeferredResourceLookupRepo
                 yield break;
             }
 
+            string dictionaryIdentity = null;
+            if (dictionary.Contains("__Identity"))
+            {
+                dictionaryIdentity = dictionary["__Identity"] as string;
+            }
+
             foreach (var reference in weakReferenceList)
             {
-                yield return new DeferredResourceInfo(KeyPropertyInfo.GetValue(reference)?.ToString() ?? string.Empty);
+                yield return new DeferredResourceInfo(dictionaryIdentity, KeyPropertyInfo.GetValue(reference)?.ToString() ?? string.Empty);
             }
         }
 

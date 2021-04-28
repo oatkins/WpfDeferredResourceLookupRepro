@@ -1,0 +1,35 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".g.cs" #>
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+
+namespace WpfDeferredResourceLookupRepro.Controls
+{
+    public sealed partial class Widget
+    {
+<#
+for (int ix = 1; ix <= 20; ix++)
+{
+#>
+        public static readonly DependencyProperty Toggle<#= ix #>Property =
+            DependencyProperty.Register("Toggle<#= ix #>",
+                typeof(Brush),
+                typeof(Widget),
+                new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender));
+
+        public bool Toggle<#= ix #>
+        {
+            get => (bool)GetValue(Toggle<#= ix #>Property);
+            set => SetValue(Toggle<#= ix #>Property, value);
+        }
+
+<#
+}
+#>
+    }
+}

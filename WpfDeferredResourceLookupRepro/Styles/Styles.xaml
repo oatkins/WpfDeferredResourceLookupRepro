@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:WpfDeferredResourceLookupRepro.Controls" 
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    
+    <sys:String x:Key="__Identity">Styles.xaml</sys:String>
+
+    <Style TargetType="TextBox">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="3" />
+        <Setter Property="Width" Value="75" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="MinWidth" Value="75" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Margin" Value="4" />
+    </Style>
+
+    <Style TargetType="ListViewItem">
+        <Setter Property="controls:ItemProperties.ItemBrush1" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush2" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush3" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush4" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush5" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush6" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush7" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush8" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush9" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush10" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush11" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush12" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush13" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush14" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush15" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush16" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush17" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush18" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush19" Value="{DynamicResource RedBrush}" />
+        <Setter Property="controls:ItemProperties.ItemBrush20" Value="{DynamicResource RedBrush}" />
+        <Setter Property="Background" Value="{DynamicResource Pink}" />
+        <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    </Style>
+
+</ResourceDictionary>

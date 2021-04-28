@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Controls;
-using WpfDeferredResourceLookupRepo.ViewModels;
+using WpfDeferredResourceLookupRepro.ViewModels;
 
-namespace WpfDeferredResourceLookupRepo.Views
+namespace WpfDeferredResourceLookupRepro.Views
 {
     /// <summary>
     /// Interaction logic for MainView.xaml

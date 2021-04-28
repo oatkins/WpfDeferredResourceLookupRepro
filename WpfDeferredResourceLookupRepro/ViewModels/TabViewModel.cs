@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace WpfDeferredResourceLookupRepo.ViewModels
+namespace WpfDeferredResourceLookupRepro.ViewModels
 {
     public sealed class TabViewModel : ViewModel
     {
@@ -8,13 +8,13 @@ namespace WpfDeferredResourceLookupRepo.ViewModels
         {
             TabName = $"Tab {tabNumber}";
 
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Things.Add(new ThingViewModel(i));
+                ThingLists.Add(new ThingListViewModel(i));
             }
         }
 
-        public ObservableCollection<ThingViewModel> Things { get; } = new();
+        public ObservableCollection<ThingListViewModel> ThingLists { get; } = new();
 
         public string TabName { get; }
     }
