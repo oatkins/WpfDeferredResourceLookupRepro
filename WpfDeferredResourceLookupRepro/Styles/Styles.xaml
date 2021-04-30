@@ -5,9 +5,6 @@
 
     <sys:String x:Key="__Identity">Styles.xaml</sys:String>
 
-    <SolidColorBrush Color="Red" x:Key="RedBrush" />
-    <SolidColorBrush Color="Blue" x:Key="BlueBrush" />
-
     <SolidColorBrush x:Key="Pink" Color="DeepPink" />
     <SolidColorBrush x:Key="Foreground" Color="AliceBlue" />
     <SolidColorBrush x:Key="BorderBrush" Color="SaddleBrown" />
