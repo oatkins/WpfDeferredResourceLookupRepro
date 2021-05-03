@@ -5,24 +5,15 @@
 
     <sys:String x:Key="__Identity">Styles.xaml</sys:String>
 
+    <!-- Comment out these resource overrides to eliminate item 3 in the list of
+         required conditions to reproduce the bug. -->
     <SolidColorBrush x:Key="Pink" Color="DeepPink" />
     <SolidColorBrush x:Key="Foreground" Color="AliceBlue" />
     <SolidColorBrush x:Key="BorderBrush" Color="SaddleBrown" />
 
-    <Style TargetType="TextBox">
-        <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Margin" Value="3" />
-        <Setter Property="Width" Value="75" />
-        <Setter Property="HorizontalAlignment" Value="Left" />
-    </Style>
-
-    <Style TargetType="Button">
-        <Setter Property="MinWidth" Value="75" />
-        <Setter Property="Padding" Value="3" />
-        <Setter Property="Margin" Value="4" />
-    </Style>
-
     <Style TargetType="ListViewItem">
+        <!-- Comment out these attached properties to reduce the number of deferred resource
+             references. See item 2 in the list of conditions needed to reproduce the bug. -->
         <Setter Property="controls:ItemProperties.ItemBrush1" Value="{DynamicResource RedBrush}" />
         <Setter Property="controls:ItemProperties.ItemBrush2" Value="{DynamicResource RedBrush}" />
         <Setter Property="controls:ItemProperties.ItemBrush3" Value="{DynamicResource RedBrush}" />
@@ -43,12 +34,17 @@
         <Setter Property="controls:ItemProperties.ItemBrush18" Value="{DynamicResource RedBrush}" />
         <Setter Property="controls:ItemProperties.ItemBrush19" Value="{DynamicResource RedBrush}" />
         <Setter Property="controls:ItemProperties.ItemBrush20" Value="{DynamicResource RedBrush}" />
+        
+        <!-- Comment out these properties to eliminate item number 4 in the list of required
+             conditions for the bug repro. -->
         <Setter Property="Background" Value="{DynamicResource Pink}" />
         <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
         <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
     </Style>
 
     <Style TargetType="{x:Type controls:Widget}">
+        <!-- Comment out these attached properties to reduce the number of deferred resource
+             references. See item 2 in the list of conditions needed to reproduce the bug. -->
         <Setter Property="Toggle1" Value="{DynamicResource RedBrush}" />
         <Setter Property="Toggle2" Value="{DynamicResource RedBrush}" />
         <Setter Property="Toggle3" Value="{DynamicResource RedBrush}" />
@@ -69,6 +65,9 @@
         <Setter Property="Toggle18" Value="{DynamicResource RedBrush}" />
         <Setter Property="Toggle19" Value="{DynamicResource RedBrush}" />
         <Setter Property="Toggle20" Value="{DynamicResource RedBrush}" />
+
+        <!-- Comment out these properties to eliminate item number 4 in the list of required
+             conditions for the bug repro. -->
         <Setter Property="Background" Value="{DynamicResource Pink}" />
         <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
         <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
