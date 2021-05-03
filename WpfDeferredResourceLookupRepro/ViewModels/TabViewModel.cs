@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using static WpfDeferredResourceLookupRepro.ViewModels.Constants;
 
 namespace WpfDeferredResourceLookupRepro.ViewModels
 {
@@ -8,7 +9,7 @@ namespace WpfDeferredResourceLookupRepro.ViewModels
         {
             TabName = $"Tab {tabNumber}";
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < NumberOfLists; i++)
             {
                 ThingLists.Add(new ThingListViewModel(i));
             }

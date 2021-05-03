@@ -7,29 +7,6 @@
     <sys:String x:Key="__Identity">Generic.xaml</sys:String>
 
     <Style TargetType="{x:Type local:Widget}">
-        <Setter Property="Toggle1" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle2" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle3" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle4" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle5" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle6" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle7" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle8" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle9" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle10" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle11" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle12" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle13" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle14" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle15" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle16" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle17" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle18" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle19" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Toggle20" Value="{DynamicResource RedBrush}" />
-        <Setter Property="Background" Value="{DynamicResource Pink}" />
-        <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:Widget}">

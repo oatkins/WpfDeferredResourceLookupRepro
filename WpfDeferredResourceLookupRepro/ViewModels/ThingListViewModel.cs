@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using static WpfDeferredResourceLookupRepro.ViewModels.Constants;
 
 namespace WpfDeferredResourceLookupRepro.ViewModels
 {
@@ -6,7 +7,7 @@ namespace WpfDeferredResourceLookupRepro.ViewModels
     {
         public ThingListViewModel(int number)
         {
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < NumberOfItemsPerList; i++)
             {
                 Things.Add(new ThingViewModel(i));
             }

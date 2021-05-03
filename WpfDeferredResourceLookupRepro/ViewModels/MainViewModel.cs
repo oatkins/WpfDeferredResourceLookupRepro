@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using static WpfDeferredResourceLookupRepro.ViewModels.Constants;
 
 namespace WpfDeferredResourceLookupRepro.ViewModels
 {
@@ -19,7 +20,7 @@ namespace WpfDeferredResourceLookupRepro.ViewModels
                 return;
             }
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < NumberOfTabs; i++)
             {
                 TabViewModels.Add(new TabViewModel(i));
             }
