@@ -2,8 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:WpfDeferredResourceLookupRepro.Controls" 
                     xmlns:sys="clr-namespace:System;assembly=System.Runtime">
-    
+
     <sys:String x:Key="__Identity">Styles.xaml</sys:String>
+
+    <SolidColorBrush x:Key="Pink" Color="DeepPink" />
+    <SolidColorBrush x:Key="Foreground" Color="AliceBlue" />
+    <SolidColorBrush x:Key="BorderBrush" Color="SaddleBrown" />
 
     <Style TargetType="TextBox">
         <Setter Property="VerticalAlignment" Value="Center" />
