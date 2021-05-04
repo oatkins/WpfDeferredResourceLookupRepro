@@ -30,9 +30,9 @@ namespace WpfDeferredResourceLookupRepro.ViewModels
                     ((RelayCommand)RemoveTabsCommand).CanExecute = false;
                     ((RelayCommand)AddTabsCommand).CanExecute = true;
                 })
-                {
-                    CanExecute = false
-                };
+            {
+                CanExecute = false
+            };
         }
 
         public int DeferredResourceCount

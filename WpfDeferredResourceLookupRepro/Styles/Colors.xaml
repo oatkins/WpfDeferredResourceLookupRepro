@@ -1,12 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
-    <SolidColorBrush Color="Red" x:Key="RedBrush" />
-    <SolidColorBrush Color="Blue" x:Key="BlueBrush" />
-
-    <SolidColorBrush x:Key="Pink" Color="DeepPink" />
-    <SolidColorBrush x:Key="Foreground" Color="AliceBlue" />
-    <SolidColorBrush x:Key="BorderBrush" Color="SaddleBrown" />
+    <SolidColorBrush x:Key="DynamicResource MahApps.Brushes.Selected.Foreground" Color="HotPink" />
     
 </ResourceDictionary>

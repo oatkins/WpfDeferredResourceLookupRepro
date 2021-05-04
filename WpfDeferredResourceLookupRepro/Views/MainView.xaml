@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:viewmodels="clr-namespace:WpfDeferredResourceLookupRepro.ViewModels"
-             xmlns:controls="clr-namespace:WpfDeferredResourceLookupRepro.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
@@ -14,7 +13,7 @@
 
     <UserControl.Resources>
         <DataTemplate DataType="{x:Type viewmodels:ThingViewModel}">
-            <controls:Widget Content="{Binding Display}"/>
+            <CheckBox Content="{Binding Display}"/>
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type viewmodels:ThingListViewModel}">
