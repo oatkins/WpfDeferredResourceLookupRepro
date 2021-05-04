@@ -10,3 +10,11 @@ the problem. The left hand side contains the elements that cause deferred resour
 
 The **Count:** field uses reflection to display the total number of elements in the internal
 `_deferredResourceReferences` field of every resource dictionary merged into the application’s resources.
+
+
+## MahApps
+
+See [This MahApps issue](https://github.com/MahApps/MahApps.Metro/issues/4100) for details of how this
+problem is especially evident when using MahApps. The **mahapps** branch in this repo contains somewhat
+simpler code that reproduces the problem. Comment out the references to the MahApps resources in **App.xaml**
+to compare performance with the standard WPF/Windows styles.
