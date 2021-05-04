@@ -2,8 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                     xmlns:sys="clr-namespace:System;assembly=System.Runtime">
     
-    <sys:String x:Key="__Identity">Colors.xaml</sys:String>
-
     <SolidColorBrush Color="Red" x:Key="RedBrush" />
     <SolidColorBrush Color="Blue" x:Key="BlueBrush" />
 

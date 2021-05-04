@@ -3,8 +3,6 @@
                     xmlns:controls="clr-namespace:WpfDeferredResourceLookupRepro.Controls" 
                     xmlns:sys="clr-namespace:System;assembly=System.Runtime">
 
-    <sys:String x:Key="__Identity">Styles.xaml</sys:String>
-
     <!-- Comment out these resource overrides to eliminate item 3 in the list of
          required conditions to reproduce the bug. -->
     <SolidColorBrush x:Key="Pink" Color="DeepPink" />

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
 
 namespace WpfDeferredResourceLookupRepro
 {
+    [DebuggerDisplay(@"{DictionaryIdentity,nq}: {Key,nq}")]
     internal class DeferredResourceInfo
     {
         private static readonly FieldInfo DeferredResourceReferencesField = typeof(ResourceDictionary).GetField("_deferredResourceReferences", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -38,10 +40,10 @@ namespace WpfDeferredResourceLookupRepro
                 yield break;
             }
 
-            string dictionaryIdentity = null;
-            if (dictionary.Contains("__Identity"))
+            string dictionaryIdentity = dictionary.Source?.ToString();
+            if (dictionaryIdentity == null && dictionary.Contains(@"__Identity"))
             {
-                dictionaryIdentity = dictionary["__Identity"] as string;
+                dictionaryIdentity = (string)dictionary["__Identity"];
             }
 
             foreach (var reference in weakReferenceList)
